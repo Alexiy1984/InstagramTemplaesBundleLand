@@ -10,8 +10,20 @@ $titleBigFontSizes: (
   medium: (65px, 90%, -0.05em),
 );
 
+$titleFontSizes: (
+  null: (34px, 110%, -0.05em),
+  small: (40px, 110%, -0.05em),
+  medium: (50px, 110%, -0.05em),
+);
+
 $titleSmallFontSizes: (
   null: (28px, 110%, -0.05em),
   small: (32px, 110%, -0.05em),
   medium: (35px, 110%, -0.05em),
+);
+
+$subtitleFontSizes: (
+  null: (16px, 140%, -0.03em),
+  small: (17px, 140%, -0.03em),
+  medium: (18px, 140%, -0.03em),
 );

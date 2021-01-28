@@ -1,5 +1,60 @@
+$mobile-card-image-margins: (
+  null: (40px, auto, 0, auto),
+  small: (60px, auto, 0, auto),
+  medium: (66px, auto, 0, auto),
+);
+
 .mobile-card {
   width: 100%;
   background-color: #f6f6f6;
   padding: 30px 30px 0 30px;
+
+  .title_small {
+    max-width: 405px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    max-width: 343px;
+    color: rgba(#000, 0.55);
+    margin-bottom: 20px;
+  }
+
+  &__tag {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 6px 8px;
+    background-color: rgba(89, 89, 89, 0.06);
+    color: rgba(#000, 0.55);
+  }
+
+  &__image {
+    @include element-indent($mobile-card-image-margins, 'margin');
+
+    max-width: 272px;
+    width: 100%;
+
+    .inner {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 131%;
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .mobile-card {
+    &__image {
+      width: calc(100% + 40px);
+      margin-left: -20px;
+    }
+  }
 }

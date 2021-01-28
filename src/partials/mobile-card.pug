@@ -1,0 +1,9 @@
+.mobile-card
+  p.title_small #{cardTitle}
+  p.subtitle #{cardSubTitle}
+  p.mobile-card__tag #{cardTag}
+  .mobile-card__image
+    .inner
+      - var image_name = cardImage
+      - var path_name = 'images/mobilePics/'
+      include picture_nolazy

@@ -21,13 +21,44 @@ $hero__subtitle-font-sizes: (
     max-width: 427px;
   }
 
+  &__button-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .button {
+      width: 100%;
+    }
+
+    svg {
+      margin-top: 30px;
+      margin-left: 0;
+    }
+  }
+
   &__footer-text {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: -0.3px;
-    margin-bottom: 30px;
     color: #999;
     margin-top: 40px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 400px) {
+  .hero {
+    &__button-group {
+      .button {
+        width: auto;
+      }
+
+      svg {
+        margin-top: 0;
+        margin-left: 30px;
+      }
+    }
   }
 }
 
@@ -35,6 +66,7 @@ $hero__subtitle-font-sizes: (
   .hero {
     &__footer-text {
       margin-top: 0;
+      margin-bottom: 30px;
     }
   }
 }
