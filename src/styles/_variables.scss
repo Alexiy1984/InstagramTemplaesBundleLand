@@ -1,0 +1,17 @@
+$breakpoints: (
+  small: 768px,
+  medium: 992px,
+  large: 1200px,
+);
+
+$titleBigFontSizes: (
+  null: (45px, 90%, -0.05em),
+  small: (56px, 90%, -0.05em),
+  medium: (65px, 90%, -0.05em),
+);
+
+$titleSmallFontSizes: (
+  null: (28px, 110%, -0.05em),
+  small: (32px, 110%, -0.05em),
+  medium: (35px, 110%, -0.05em),
+);

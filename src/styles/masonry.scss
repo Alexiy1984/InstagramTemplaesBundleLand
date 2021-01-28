@@ -1,0 +1,29 @@
+.masonry {
+  display: flex;
+  width: 100%;
+  max-width: 555px;
+  margin: 0 auto;
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 8px);
+    margin-right: 12px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 12px;
+
+    img {
+      width: 100%;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+$mobile-pics-paddings: (
+  null: (50px, 0, 50px, 0),
+  small: (60px, 0, 60px, 0),
+  medium: (68px, 0, 68px, 0),
+);
+
+.mobile-pics {
+  @include element-indent($mobile-pics-paddings, 'padding');
+}

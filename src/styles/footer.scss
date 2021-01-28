@@ -1,0 +1,23 @@
+$footerTextColor: #fff;
+$footerLinksColor: #808080;
+
+.footer {
+  background-color: #000;
+  color: $footerTextColor;
+  padding: 30px 0;
+
+  &__container {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  &__link {
+    color: $footerLinksColor;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+
+    &:hover {
+      color: $footerTextColor;
+    }
+  }
+}

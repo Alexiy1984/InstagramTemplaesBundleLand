@@ -1,0 +1,40 @@
+$hero__subtitle-font-sizes: (
+  null: (18px, 140%, -0.03em),
+  small: (20px, 140%, -0.03em),
+  medium: (21px, 140%, -0.03em),
+);
+
+.hero {
+  background-color: #000;
+  color: #fff;
+  padding: 50px 0 0 0;
+
+  .title_big {
+    max-width: 427px;
+  }
+
+  &__subtitle {
+    @include font-size($hero__subtitle-font-sizes);
+
+    margin: 20px 0 30px;
+    color: #8c8c8c;
+    max-width: 427px;
+  }
+
+  &__footer-text {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    margin-bottom: 30px;
+    color: #999;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero {
+    &__footer-text {
+      margin-top: 0;
+    }
+  }
+}

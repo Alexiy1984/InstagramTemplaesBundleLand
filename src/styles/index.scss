@@ -1,0 +1,65 @@
+@import "variables";
+@import "mixins";
+@import "fontfaces";
+@import "~animate.css/animate.css";
+@import "~reset-css/sass/reset";
+
+$body-color: #000;
+
+body {
+  color: $body-color;
+  font-family: EuclidCircular, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.container_thin {
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.title {
+  &_big {
+    @include font-size($titleBigFontSizes);
+  }
+
+  &_small {
+    @include font-size($titleSmallFontSizes);
+  }
+}
+
+.text {
+  &_center {
+    text-align: center;
+  }
+
+  &_right {
+    text-align: right;
+  }
+
+  &_left {
+    text-align: left;
+  }
+}
+
+.vertically_centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@import "button";
+@import "hero";
+@import "two-colls";
+@import "masonry";
+@import "mobile-pics";
+@import "mobile-card";
+@import "footer";
