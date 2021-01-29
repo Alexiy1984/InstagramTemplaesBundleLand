@@ -17,14 +17,14 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1260px;
   padding: 0 30px;
   margin: 0 auto;
 }
 
 .container_thin {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1200px;
   padding: 0 30px;
   margin: 0 auto;
 }
@@ -73,4 +73,7 @@ body {
 @import "mobile-pics";
 @import "mobile-card";
 @import "desktop-pics";
+@import "full-preview";
+@import "tabs";
+@import "flex-container";
 @import "footer";

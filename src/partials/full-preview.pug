@@ -1,0 +1,30 @@
+.full-preview
+  .container
+    h2.title_big.text_center Full Preview
+    .tabs
+      .tabs__controls  
+        .tabs__control.active(data-target='#container_1')
+          p Posts
+        .tabs__control(data-target='#container_2')
+          p Strories  
+      .tabs__container#container_1 
+        .full-preview__labels
+          p Pack1 
+          p Typist
+        .flex-container
+          - var posts = Array.from(Array(30+1).keys()).slice(1)
+          each val in posts
+            .flex-container__item
+              .full-preview__post
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/posts/pack1/'
+                include picture
+      .tabs__container#container_2(style='display: none;')
+        .flex-container
+          - var posts = Array.from(Array(50+1).keys()).slice(1)
+          each val in posts
+            .flex-container__item
+              .full-preview__story
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/posts/'
+                include picture
