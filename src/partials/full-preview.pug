@@ -19,6 +19,39 @@
                 - var image_name = 'Image' + val
                 - var path_name = 'images/fullPreview/posts/pack1/'
                 include picture
+        .full-preview__labels
+          p Pack2 
+          p Serpent
+        .flex-container
+          - var posts = Array.from(Array(30+1).keys()).slice(1)
+          each val in posts
+            .flex-container__item
+              .full-preview__post
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/posts/pack2/'
+                include picture
+        .full-preview__labels
+          p Pack3
+          p Rumor
+        .flex-container
+          - var posts = Array.from(Array(30+1).keys()).slice(1)
+          each val in posts
+            .flex-container__item
+              .full-preview__post
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/posts/pack3/'
+                include picture
+        .full-preview__labels
+          p Pack4
+          p Electro
+        .flex-container
+          - var posts = Array.from(Array(30+1).keys()).slice(1)
+          each val in posts
+            .flex-container__item
+              .full-preview__post
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/posts/pack4/'
+                include picture              
       .tabs__container#container_2(style='display: none;')
         .flex-container
           - var posts = Array.from(Array(50+1).keys()).slice(1)
