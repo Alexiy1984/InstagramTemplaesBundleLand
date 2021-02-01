@@ -24,6 +24,7 @@ $button_font_sizes: (
   font-weight: $fontWeight;
   transition: background-color 0.15s ease-in, color 0.15s ease-in;
   border: none;
+  text-decoration: none;
 
   &:hover {
     cursor: pointer;

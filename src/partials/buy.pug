@@ -1,0 +1,94 @@
+.buy#buy
+  .container
+    .buy__inner
+      .buy__title Improve your Instagram profile with a single bundle
+      .buy__colls
+        .buy__coll_left
+          .pack-card
+            .pack-card__header
+              p Typist
+              p.pack-card__price $18
+            - var image_name = 'Image1'
+            - var path_name = 'images/buy/'
+            include picture
+            a.pack-card__button(href='#') Purchase for $18
+          .pack-card
+            .pack-card__header
+              p Rumor
+              p.pack-card__price $18
+            - var image_name = 'Image2'
+            - var path_name = 'images/buy/'
+            include picture
+            a.pack-card__button(href='#') Purchase for $18  
+        .buy__coll_center
+          .purchase-card
+            .purchase-card__header
+              p.purchase-card__label All packs
+              p.purchase-card__price_old $72
+              p.purchase-card__price $38
+            .purchase-card__body
+              p.purchase-card__title Instagram Templates Full Bundle  
+              ul.purchase-card__list
+                li
+                  include ../svg/checkMark
+                  span Set of 4 template packages
+                li
+                  include ../svg/checkMark
+                  span 120 posts & 120 stories
+                li
+                  include ../svg/checkMark
+                  span Free Google fonts
+                li
+                  include ../svg/checkMark
+                  span Figma, Sketch, Adobe XD
+                li
+                  include ../svg/checkMark
+                  span Personal & Commercial license
+              a.button_black(href='#') Purchase for $38          
+        .buy__coll_right
+          .pack-card
+            .pack-card__header
+              p Serpent
+              p.pack-card__price $18
+            - var image_name = 'Image3'
+            - var path_name = 'images/buy/'
+            include picture
+            a.pack-card__button(href='#') Purchase for $18
+          .pack-card
+            .pack-card__header
+              p Electro
+              p.pack-card__price $18
+            - var image_name = 'Image4'
+            - var path_name = 'images/buy/'
+            include picture
+            a.pack-card__button(href='#') Purchase for $18 
+      .buy__colls_black
+        .buy__coll_left
+          .simple-card
+            p.title_small Pro Access
+            p.subtitle Membership that provides all design products at once
+            a.button_secondary(href='https://craftwork.design/pro-access/') Go Pro for $89/quarter
+        .buy__coll_left.mr-md-0
+          .simple-card_left-border
+            ul.simple-card__list
+              li 
+                include ../svg/checkMarkSmall
+                span All Craftwork products under simple subsription
+              li 
+                include ../svg/checkMarkSmall   
+                span Early access to releases and updates
+              li
+                include ../svg/checkMarkSmall   
+                span Paid assets become free
+              li
+                include ../svg/checkMarkSmall   
+                span Storytale discounts
+              li 
+                include ../svg/checkMarkSmall
+                span Cancel anytime
+        .buy__coll_wide
+          .simple-card_no-vertical-paddings
+            .simple-card__img
+              - var image_name = 'Image'
+              - var path_name = 'images/proAccess/'
+              include picture
