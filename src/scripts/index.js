@@ -58,36 +58,38 @@ $(function() {
       }
     }
   });
+});
 
+// Hide header on scroll down
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
-var navbarHeight = $('header').outerHeight();
+var navbarHeight = $('.header').outerHeight();
 
-$(window).scroll(function(event){
-    didScroll = true;
+$(window).on('scroll', function(event){
+  didScroll = true;
 });
 
 setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
+  if (didScroll) {
+      hasScrolled();
+      didScroll = false;
+  }
 }, 250);
 
 function hasScrolled() {
-    var st = $(this).scrollTop();
+  var st = $(window).scrollTop();
+  console.log(st);
+  console.log(lastScrollTop);
   
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
-    if (st > lastScrollTop && st > navbarHeight){
-        $('.header').removeClass('nav-down').addClass('nav-up');
-    } else {
-        if(st + $(window).height() < $(document).height()) {
-            $('.header').removeClass('nav-up').addClass('nav-down');
-        }
+  if(Math.abs(lastScrollTop - st) <= delta) return;
+  if (st > lastScrollTop && st > navbarHeight){
+    $('.header').removeClass('down').addClass('up');
+  } else {
+    if(st + $(window).height() < $(document).height()) {
+      $('.header').removeClass('up').addClass('down');
     }
-    
-    lastScrollTop = st;
+  }
+
+  lastScrollTop = st;
 }
-});

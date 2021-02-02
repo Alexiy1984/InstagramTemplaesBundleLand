@@ -8,6 +8,15 @@
   left: 0;
   width: 100%;
   z-index: 100;
+  transition: top 0.3s ease-in-out;
+
+  &.up {
+    top: -70px;
+  }
+
+  &.down {
+    top: 0;
+  }
 
   .container_thin {
     display: flex;
