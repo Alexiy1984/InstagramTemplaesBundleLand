@@ -67,11 +67,18 @@ $desktop-pics-paddings: (
 
     &__image {
       padding-top: 547px;
-      margin-top: -30px;
     }
 
     img {
       width: auto;
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .desktop-pics {
+    &__image {
+      margin-top: -30px;
     }
   }
 }
