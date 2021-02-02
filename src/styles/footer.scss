@@ -2,7 +2,7 @@ $footerTextColor: #fff;
 $footerLinksColor: #808080;
 
 $footer-bottom-margins: (
-  null: (60px, 0, 0, 0),
+  null: (40px, 0, 0, 0),
   small: (100px, 0, 0, 0),
   medium: (170px, 0, 0, 0),
 );
@@ -47,6 +47,7 @@ $footer-bottom-margins: (
     &__item {
       width: 100%;
       margin-right: 0;
+      margin-bottom: 30px;
 
       &:last-child {
         margin-right: 0;
@@ -87,7 +88,7 @@ $footer-bottom-margins: (
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .footer {
     &__menu {
       &__item {
@@ -102,19 +103,12 @@ $footer-bottom-margins: (
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .footer {
-    &__info {
-      width: calc(25% - 30px);
-      margin-right: 30px;
-      margin-bottom: 0;
-    }
-
     &__menu {
-      width: 75%;
-
       &__item {
         width: calc(25% - 22.5px);
+        margin-bottom: 0;
 
         &:nth-child(2) {
           margin-right: 30px;
@@ -124,6 +118,24 @@ $footer-bottom-margins: (
           margin-right: 0;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .footer {
+    &__info {
+      width: calc(25% - 30px);
+      margin-right: 30px;
+      margin-bottom: 0;
+
+      p {
+        max-width: 305px;
+      }
+    }
+
+    &__menu {
+      width: 75%;
     }
   }
 }
