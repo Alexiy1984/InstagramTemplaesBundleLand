@@ -1,11 +1,12 @@
 .desktop-pics
   .container
-    .two-colls
-      .two-colls__item
-        h2.title Editable sources for each card included
-        p.subtitle Turn Instagram profile to cool and modern side without special skills and with no time-wasting
-        include ../svg/tools
-    .desktop-pics__image    
-      - var image_name = 'desktopImage'
-      - var path_name = 'images/desktopPics/'
-      include picture_nolazy
+    .desktop-pics__inner 
+      .two-colls
+        .two-colls__item
+          h2.title Editable sources for each card included
+          p.subtitle Turn Instagram profile to cool and modern side without special skills and with no time-wasting
+          include ../svg/tools
+      .desktop-pics__image    
+        - var image_name = 'desktopImage'
+        - var path_name = 'images/desktopPics/'
+        include picture_nolazy

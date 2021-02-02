@@ -10,6 +10,11 @@ $desktop-pics-paddings: (
   background-color: #000;
   color: #fff;
 
+  &__inner {
+    padding-top: 30px;
+    background-color: rgba(#fff, 0.09);
+  }
+
   .two-colls {
     position: relative;
     z-index: 11;
