@@ -32,12 +32,18 @@ body {
 .title {
   @include font-size($titleFontSizes);
 
+  font-weight: 500;
+
   &_big {
     @include font-size($titleBigFontSizes);
+
+    font-weight: 500;
   }
 
   &_small {
     @include font-size($titleSmallFontSizes);
+
+    font-weight: 500;
   }
 }
 
@@ -64,6 +70,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 @import "button";

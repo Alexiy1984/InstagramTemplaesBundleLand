@@ -60,11 +60,11 @@ $(function() {
   });
 });
 
-// Hide header on scroll down
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
-var navbarHeight = $('.header').outerHeight();
+var heroBlockHeight = $('.hero').outerHeight();
+var headerHeight = $('.header').outerHeight();
 
 $(window).on('scroll', function(event){
   didScroll = true;
@@ -81,13 +81,23 @@ function hasScrolled() {
   var st = $(window).scrollTop();
   console.log(st);
   console.log(lastScrollTop);
-  
+
   if(Math.abs(lastScrollTop - st) <= delta) return;
-  if (st > lastScrollTop && st > navbarHeight){
+  if (st > lastScrollTop && st > heroBlockHeight){
     $('.header').removeClass('down').addClass('up');
+    if (st > (heroBlockHeight + headerHeight)) {
+      $('.header').addClass('white');
+    } else {
+      $('.header').removeClass('white');
+    }
   } else {
     if(st + $(window).height() < $(document).height()) {
       $('.header').removeClass('up').addClass('down');
+      if (st > (heroBlockHeight - headerHeight)) {
+        $('.header').addClass('white');
+      } else {
+        $('.header').removeClass('white');
+      }
     }
   }
 

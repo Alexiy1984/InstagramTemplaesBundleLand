@@ -36,6 +36,7 @@ $buy-title-font-sizes: (
 
     text-align: center;
     max-width: 857px;
+    font-weight: 500;
   }
 
   &__colls {
@@ -85,7 +86,16 @@ $buy-title-font-sizes: (
 
     &_wide {
       width: 100%;
+      border-top: 1px solid rgba(#fff, 0.2);
       order: 1;
+    }
+
+    &_mobile-bottom-line {
+      @extend .buy__coll;
+
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(#fff, 0.2);
+      margin-bottom: 15px;
     }
   }
 }
@@ -101,6 +111,12 @@ $buy-title-font-sizes: (
         &.mr-md-0 {
           margin-right: 0;
         }
+      }
+
+      &_mobile-bottom-line {
+        padding-bottom: 0;
+        border-bottom: none;
+        margin-bottom: 30px;
       }
     }
   }
@@ -131,6 +147,7 @@ $buy-title-font-sizes: (
       }
 
       &_wide {
+        border-top: none;
         width: calc(41.5% - 20px);
         order: 1;
       }
