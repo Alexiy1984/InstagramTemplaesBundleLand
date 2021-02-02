@@ -36,5 +36,16 @@
     text-decoration: none;
     color: #000;
     overflow: hidden;
+    transition: color 0.15s ease-in, border-color 0.15s ease-in;
+
+    &:hover {
+      border-color: rgba(#000, 0.05);
+      color: rgba(#000, 0.6);
+    }
+
+    &:active {
+      border-color: rgba(#000, 0.2);
+      color: #000;
+    }
   }
 }
