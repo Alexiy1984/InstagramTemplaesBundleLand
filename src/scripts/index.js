@@ -83,22 +83,18 @@ function hasScrolled() {
   console.log(lastScrollTop);
 
   if(Math.abs(lastScrollTop - st) <= delta) return;
-  if (st > lastScrollTop && st > heroBlockHeight){
+  if (st > lastScrollTop && st > headerHeight){
     $('.header').removeClass('down').addClass('up');
-    if (st > (heroBlockHeight + headerHeight)) {
-      $('.header').addClass('white');
-    } else {
-      $('.header').removeClass('white');
-    }
   } else {
     if(st + $(window).height() < $(document).height()) {
       $('.header').removeClass('up').addClass('down');
-      if (st > (heroBlockHeight - headerHeight)) {
-        $('.header').addClass('white');
-      } else {
-        $('.header').removeClass('white');
-      }
     }
+  }
+
+  if (st > (heroBlockHeight + headerHeight)) {
+    $('.header').addClass('white');
+  } else {
+    $('.header').removeClass('white');
   }
 
   lastScrollTop = st;
