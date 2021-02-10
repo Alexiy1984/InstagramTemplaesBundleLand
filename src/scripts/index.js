@@ -72,8 +72,8 @@ $(window).on('scroll', function(event){
 
 setInterval(function() {
   if (didScroll) {
-      hasScrolled();
-      didScroll = false;
+    hasScrolled();
+    didScroll = false;
   }
 }, 250);
 
